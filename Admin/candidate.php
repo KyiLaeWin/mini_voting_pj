@@ -10,26 +10,17 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- Custom css --->
+ <link rel="stylesheet" href="../assets/css/style.css">
 <style>
-	body{
-		 background-image: linear-gradient(to right, #654ea3 , #eaafc8);
-
-	}
-	a{margin-right: 20px;}
-	.add_pos{margin-top:70px;text-align: center;}
-	.add_pos h3{color:green;font-size: 23px;font-weight:bold;margin-bottom: 20px;margin-left: 60px;}
-	label{font-size:20px;margin-right:20px;color:green;}
-	button{margin-left:75px;}
-
-	table {border-collapse: collapse;text-align: center;margin:10px auto;}
-	td{padding: 23px;}
-	th{padding:23px;font-size: 20px;color:green;}
+	
 </style>
 <body>
 <?php
 $sql="SELECT * from position";
 $result=mysqli_query($conn,$sql);?>
-?>
+
 
             
 
@@ -43,9 +34,9 @@ $result=mysqli_query($conn,$sql);?>
 			
             </div>
 
-            <div class="add_pos">
+            <div class="box">
             	<form action="candidate_add.php" method="POST">
-            	<h3>Add New Candidate</h3>
+            	<h3 style="margin-left: 60px;">Add New Candidate</h3>
               <label for="candidate">Candidate Name</label>
               <input type="text" name="candidate" id="candidate" style="margin-left:20px;width:200px;"><br>
             	<label for="position">Positon Name</label>
@@ -60,7 +51,7 @@ $result=mysqli_query($conn,$sql);?>
                     }?>
 
                     </select><br><br>
-            	<button class="button btn btn-success" name="submit">Submit</button><br>
+            	<button class="button btn btn-success" name="submit" style="margin-left:75px;">Submit</button><br>
                 </form>
             </div>
 
